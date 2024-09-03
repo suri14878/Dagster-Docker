@@ -4,7 +4,7 @@
 This Dagster project runs in a Docker container, utilizing a PostgreSQL database to manage Dagster processes and logs. The entire setup is defined in a single `docker-compose.yaml` file, which also includes PgAdmin for accessing the PostgreSQL database.
 
 ## How to Install the Project
-Below are the steps to install and execute the SQL-Executor-Helper project:
+Below are the steps to install and browse the project:
 
 1. Clone the repository:
    ```git clone https://github.com/ULL-IR-Office/Dagster-Docker.git```
