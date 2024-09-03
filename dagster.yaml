@@ -8,7 +8,7 @@ storage:
   postgres:
     postgres_db:
       username: postgres
-      password: adarsh123
+      password: ull@123
       hostname: postgres-db
       db_name: postgres
       port: 5432
