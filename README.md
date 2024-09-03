@@ -8,12 +8,12 @@ Below are the steps to install and execute the SQL-Executor-Helper project:
 
 1. Clone the repository:
    ```git clone https://github.com/ULL-IR-Office/Dagster-Docker.git```
-3. In the root folder build the docker image for dagster using the command  
+2. In the root folder build the docker image for dagster using the command  
       ```bash
     docker build -t dagster-docker
     ```
    **Note:** 'Do not change the tag name while building the docker image'.
-5. Now build the docker compose file using the command
+3. Now build the docker compose file using the command
    ```bash
     docker-compose up
     ```
