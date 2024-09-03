@@ -5,7 +5,7 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: adarsh123
+      POSTGRES_PASSWORD: ull@123
     volumes:
       - postgres_data:/var/lib/postgresql/data 
     ports:
