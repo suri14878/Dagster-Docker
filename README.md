@@ -3,14 +3,22 @@
 ## Introduction
 This Dagster project runs in a Docker container, utilizing a PostgreSQL database to manage Dagster processes and logs. The entire setup is defined in a single `docker-compose.yaml` file, which also includes PgAdmin for accessing the PostgreSQL database.
 
-## How to Install the Project
+## How to Install the Project through Batch Scripts
+Below are the steps to install and browse the project:
+
+1. Clone the repository:
+   ```git clone https://github.com/ULL-IR-Office/Dagster-Docker.git```
+2. In the Batch Scripts folder run `Initialize.bat` file to build and run the containers. This will run Dagster webserver, Deamon, Postgres and PgAdmin
+3. You can also utilize `Stop.bat` and `Stop & Remove.bat` files to remove or stop the containers.
+
+## How to Install the Project manually
 Below are the steps to install and browse the project:
 
 1. Clone the repository:
    ```git clone https://github.com/ULL-IR-Office/Dagster-Docker.git```
 2. In the root folder build the docker image for dagster using the command  
       ```bash
-    docker build -t dagster-docker
+    docker build -t dagster-docker .
     ```
    **Note:** 'Do not change the tag name while building the docker image'.
 3. Now build the docker compose file using the command
