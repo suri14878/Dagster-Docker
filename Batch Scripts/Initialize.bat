@@ -1,17 +1,20 @@
 @echo off
 
-:: Sets the CURRENT_DIR variable to the current directory. 
+:: Sets the CURRENT_DIR variable to the current directory.
 set "CURRENT_DIR=%~dp0"
-:: Sets the PROJ_DIR variable to the parent directory. 
+:: Sets the PROJ_DIR variable to the parent directory.
 FOR %%A IN ("%~dp0.") DO set "PROJ_DIR=%%~dpA"
 
-:: Define the log file path and clear any existing log fil
+:: Define the log file path and clear any existing log file
 set "LOG_FILE=%CURRENT_DIR%\Initialize-log.txt"
 if exist "%LOG_FILE%" del "%LOG_FILE%"
 
 :: Change to the directory where the script is located
 cd /d "%PROJ_DIR%"
 
+:: Define the local directory to mount
+set "LOCAL_DATA_DIR=%PROJ_DIR%\data"
+if not exist "%LOCAL_DATA_DIR%" mkdir "%LOCAL_DATA_DIR%"
 
 echo Building the Docker image with the tag dagster-docker...
 
@@ -33,7 +36,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
-:: Run docker-compose up
+:: Run docker-compose up with volume mapping
 docker-compose up -d
 if %ERRORLEVEL% neq 0 (
     echo Error: docker-compose up failed.
@@ -42,7 +45,7 @@ if %ERRORLEVEL% neq 0 (
 )
 echo docker-compose up ran successfully.
 
-:: Check if the dagster webser container is running
+:: Check if the dagster webserver container is running
 docker ps --filter "name=dagster-webserver" | findstr /C:"dagster-webserver" >nul
 if %ERRORLEVEL% neq 0 (
     echo Error: Container dagster-webserver is not running.
