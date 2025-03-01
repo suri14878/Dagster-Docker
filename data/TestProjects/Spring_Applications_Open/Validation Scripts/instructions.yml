@@ -1,0 +1,7 @@
+SQLFiles:
+  - SQLFile: "Validation Check.sql"
+    Queries:
+      - Index: 1
+        Database: "Default"
+        Condition:
+            validated: "Yes"     

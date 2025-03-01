@@ -1,0 +1,26 @@
+---
+SQLFiles:
+  - SQLFile: "Termination Check 1.sql"
+    Queries:
+      - Index: 1
+        Database: "Default"
+        Condition:
+          OR:
+            - {date_check: "Yes"}
+            - {status_check: "Inactive"}
+
+      - Index: 2
+        Database: "Default"
+        Condition:
+          AND:
+            - {date_check2: "Yes"}
+            - {status_check2: "Inactive"}
+
+  - SQLFile: "Termination Check 2.sql"
+    Queries:
+      - Index: 1
+        Database: "Default"
+        Condition:
+          AND:
+            - {variable1: "Yes"}
+            - {variable2: "No"}

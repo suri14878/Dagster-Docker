@@ -1,0 +1,1 @@
+select 'Yes' as validated;

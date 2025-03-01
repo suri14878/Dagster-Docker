@@ -1,0 +1,10 @@
+SQLFiles:
+  - SQLFile: "Termination Check.sql"
+    Queries:
+      - Index: 1
+        Database: "Default"
+        Condition:
+            OR:
+            - { date_check: "Yes" }
+            - { status_check: "Inactive" }   
+

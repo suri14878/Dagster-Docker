@@ -1,0 +1,12 @@
+SQLFiles:
+  - SQLFile: "Active Check.sql"
+    Queries:
+      - Index: 1
+        Database: "Default"
+        Condition:
+            date_check: "Yes"
+
+
+
+        
+

@@ -1,0 +1,3 @@
+﻿definition_index,definition_active,definition_begin_date,definition_end_date,event_name,initialization_type,initialization_key,initialization_range,termination_type,termination_value,validation_type,definition_path,definition_note
+1,TRUE,10/20/2024,12/31/2025,Start_of_Registration,Semester,"Spring",14-Day-Before Start Date,Code,14-Day,Code,Test\TestProjects\Start_of_Registration,Test Record
+2,TRUE,10/20/2024,12/31/2025,Spring_Applications_Open,Date,January 20,14-Day-Before Date,Code,14-Day,Code,Test\TestProjects\Spring_Applications_Open,Test Record

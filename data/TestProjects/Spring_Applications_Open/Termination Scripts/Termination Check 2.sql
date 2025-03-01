@@ -1,0 +1,1 @@
+Select 'Yes' as variable1, 'No' as variable2;

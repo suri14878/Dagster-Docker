@@ -1,0 +1,1 @@
+Select 'Yes' as date_check, 'Inactive' as status_check;
